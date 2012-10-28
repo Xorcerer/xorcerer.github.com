@@ -2,7 +2,7 @@
 
 **Birth:** 1985.11
 
-**Email:** xorcererzc@gmail.com (google talk as well)
+**Email:** xorcererzc@gmail.com (Google talk as well)
 
 **Cellphone:** (+86)137-6413-1714
 
