@@ -1,4 +1,4 @@
-## Zhou Chong (Logan) ##
+# Zhou Chong (Logan) #
 
 **Birth:** 1985.11
 
