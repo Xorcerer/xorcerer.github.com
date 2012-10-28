@@ -2,9 +2,9 @@
 
 **Birth:** 1985.11
 
-**Email:** xorcererzc@gmail.com (Google talk as well)
+**Email:** xorcererzc@gmail.com (**Google talk** as well)
 
-**Cellphone:** (+86)137-6413-1714
+**Cellphone:** (+86) 137-6413-1714
 
 ## Objective ##
 A position to focus on data mining/processing with proper
