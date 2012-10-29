@@ -20,12 +20,16 @@ Mac OS user, familiar with Bash, Zsh, VIM and Emacs(with vim-mode).
 StarCraft I/II player.
 
 ## Experience ##
+
 ### 2011.7 - present, Terminus Infomation Technology Limited. ###
+
 #### Web Game Abyss ####
 A Massive-multiplayer online
 game based on Flash 3D. The only project of this startup company.
 
 ##### Responsibility #####
+** Leader Engineer of Server side **
+
 * Designed a cross platforms(Mac OS X, Windows) server side development
  and testing solution.
 * Designed server architecture, protocols between several servers,
@@ -35,6 +39,7 @@ C++11 features) and python.
 * Designed and implemented game logic scripting with python, which is being
 used by all game designers.
 * Designed the smoke testing solution with Erlang.
+* Maintaining scene editor (in Flash 3D).
 
 ## Education ##
 2005 - 2009, Shanghai Maritime University, Bachelor.
