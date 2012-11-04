@@ -1,4 +1,5 @@
-# Zhou Chong (Logan) #
+Zhou Chong (Logan)
+===================
 
 **Birth:** 1985.11
 
@@ -6,29 +7,44 @@
 
 **Cellphone:** (+86) 137-6413-1714
 
+
+
 ## Objective ##
+
 A position to focus on data mining/processing with proper
 algorithms. It would be better if I could contribute open source projects.
 
+
+
 ## Strengths ##
-Proficient or familiar with a vast array of programming languages, and their concepts. Including, but not limit to: Python, Ruby, C++ (including C++11 features), C#, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
+
+Proficient or familiar with a vast array of programming languages, and
+their concepts.    
+Including, but not limit to: Python, Ruby, C++ (including C++11 features), C#, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
 
 Big fan of meta programming, especially in C++ and Python. All I love is writing short, declaritive and maintainable code.
+
+Enjoy creating and maintaining tool chains to make work and life
+easier ( e.g. update html/pdf of this resume).
 
 Mac OS user, familiar with Bash, Zsh, VIM and Emacs(with vim-mode).
 
 StarCraft I/II player.
+
+
 
 ## Experience ##
 
 ### 2011.7 - present, Terminus Infomation Technology Limited. ###
 
 #### Web Game Abyss ####
+
 A Massive-multiplayer online
 game based on Flash 3D. The only project of this startup company.
 
 ##### Responsibility #####
-** Leader Engineer of Server side **
+
+*Leader Engineer of Game Server.*
 
 * Designed a cross platforms(Mac OS X, Windows) server side development
  and testing solution.
@@ -41,5 +57,24 @@ used by all game designers.
 * Designed the smoke testing solution with Erlang.
 * Maintaining scene editor (in Flash 3D).
 
+
+### 2010.7 - 2011.7 MochiMedia.com (SNDA Group) ###
+
+#### MochiMedia.com Localization ###
+
+Developing MochiMedia's business in China with the resources of SNDA
+Game.    
+Includes: connecting Chinese Flash game developers,  building website
+of Flash games for
+Chinese player.
+
+*Leader Engineer of maqiu.cn*   
+(The site had been closed.)
+
+* Adapted SNDA Game's accounting, payment and currency system to MochiMedia.
+* Ported SNDA Candy (a social network for SNDA Game users) SDK to Python.
+* Maintaining MochiMedia's exchanging system in Erlang.
+
 ## Education ##
+
 2005 - 2009, Shanghai Maritime University, Bachelor.
