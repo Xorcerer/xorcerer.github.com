@@ -1,9 +1,10 @@
 Zhou Chong (Logan)
 ===================
-Updated version of this resume:
-[[html]](http://xorcerer.github.com/resume.html)
-[[pdf]](http://xorcerer.github.com/resume.pdf)
-[[markdown/text]](http://xorcerer.github.com/resume.md)
+Lastest version of this resume:
+
++ HTML: [http://xorcerer.github.com/resume.html](http://xorcerer.github.com/resume.html)
++ PDF: [http://xorcerer.github.com/resume.pdf](http://xorcerer.github.com/resume.pdf)
++ Text / Markdown: [http://xorcerer.github.com/resume.md](http://xorcerer.github.com/resume.md)
 
 **Birth:** 1985.11   
 **Email:** xorcererzc@gmail.com (**Google talk** as well)   
