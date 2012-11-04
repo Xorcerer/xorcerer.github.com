@@ -1,23 +1,25 @@
 Zhou Chong (Logan)
 ===================
+Updated version of this resume:
+[[html]](http://xorcerer.github.com/resume.html)
+[[pdf]](http://xorcerer.github.com/resume.pdf)
+[[markdown/text]](http://xorcerer.github.com/resume.md)
 
-**Birth:** 1985.11
-
-**Email:** xorcererzc@gmail.com (**Google talk** as well)
-
-**Cellphone:** (+86) 137-6413-1714
+**Birth:** 1985.11   
+**Email:** xorcererzc@gmail.com (**Google talk** as well)   
+**Cellphone:** (+86) 137-6413-1714   
 
 
 
-## Objective ##
-
+Objective
+-----------------------
 A position to focus on data mining/processing with proper
 algorithms. It would be better if I could contribute open source projects.
 
 
 
-## Strengths ##
-
+Strengths
+----------------------
 Proficient or familiar with a vast array of programming languages, and
 their concepts.    
 Including, but not limit to: Python, Ruby, C++ (including C++11 features), C#, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
@@ -25,7 +27,7 @@ Including, but not limit to: Python, Ruby, C++ (including C++11 features), C#, J
 Big fan of meta programming, especially in C++ and Python. All I love is writing short, declaritive and maintainable code.
 
 Enjoy creating and maintaining tool chains to make work and life
-easier ( e.g. update html/pdf of this resume).
+easier ( e.g. updating html/pdf of this resume).
 
 Mac OS user, familiar with Bash, Zsh, VIM and Emacs(with vim-mode).
 
@@ -33,11 +35,11 @@ StarCraft I/II player.
 
 
 
-## Experience ##
-
+Experience
+---------------------
 ### 2011.7 - present, Terminus Infomation Technology Limited. ###
 
-#### Web Game Abyss ####
+#### Project: Web Game Abyss ####
 
 A Massive-multiplayer online
 game based on Flash 3D. The only project of this startup company.
@@ -60,13 +62,15 @@ used by all game designers.
 
 ### 2010.7 - 2011.7 MochiMedia.com (SNDA Group) ###
 
-#### MochiMedia.com Localization ###
+#### Project: MochiMedia.com Localization ###
 
 Developing MochiMedia's business in China with the resources of SNDA
 Game.    
 Includes: connecting Chinese Flash game developers,  building website
 of Flash games for
 Chinese player.
+
+##### Responsibility #####
 
 *Leader Engineer of maqiu.cn*   
 (The site had been closed.)
@@ -75,6 +79,39 @@ Chinese player.
 * Ported SNDA Candy (a social network for SNDA Game users) SDK to Python.
 * Maintaining MochiMedia's exchanging system in Erlang.
 
-## Education ##
 
+### 2009.7 ~ 2010.7 fuwo.com ###
+
+#### Project 1/2:  fuwo.com ####
+
+A website, written in Python/Django, connecting decoration companies and their (potential)
+users.
+
+##### Responsibility #####
+
+*Leader Engineer*
+
+* Designed the architecture of the website.
+* Dev scheduling and task assigning.
+* Wrote basement components, e.g. image saving and auto thumbnailing.
+* Performance turning.
+
+
+#### Project 2/2: iFuwo 3D Decoration Simulator ####
+
+A Windows 3D modeling software, written in C#/WPF, for users to
+simulate and share their ideas of decoration.
+
+##### Responsibility #####
+
+*Algorithm specialist Engineer*
+
+* Calculation of minimal costing of wiring (using "Dijkstra Shortest
+  Path" and "Minimal Spanning Tree").
+* C# XML serialization/deserialization (not the built-in one. The
+built-in one does not support generic type, but ours does).
+* 3D camera control.
+
+Education
+----------------
 2005 - 2009, Shanghai Maritime University, Bachelor.
