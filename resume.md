@@ -15,7 +15,8 @@ Lastest version of this resume:
 Objective
 -----------------------
 A position to focus on data mining/processing with proper
-algorithms. It would be better if I could contribute open source projects.
+algorithms.   
+It would be better if I could contribute open source projects.
 
 
 
@@ -110,8 +111,12 @@ simulate and share their ideas of decoration.
 * Calculation of minimal costing of wiring (using "Dijkstra Shortest
   Path" and "Minimal Spanning Tree").
 * C# XML serialization/deserialization (not the built-in one. The
-built-in one does not support generic type, but ours does).
+built-in one does not support generic type, but ours does for
+specified cases).
+* Undo / Redo support.
 * 3D camera control.
+
+
 
 Education
 ----------------
