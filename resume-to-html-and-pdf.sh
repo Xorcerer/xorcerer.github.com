@@ -20,6 +20,5 @@ echo "
 </html>
 " > resume.html
 
-# wkhtmltopdf 9.9.0 is recommanded in Mac OS X.
-# Ref: http://code.google.com/p/wkhtmltopdf/issues/detail?id=141
-wkhtmltopdf resume.html resume.pdf
+# Latex (MacTex in Mac OS) required.
+pandoc -f markdown resume.md -o resume.pdf

@@ -3,7 +3,7 @@ Zhou Chong (Logan)
 
 **Birth:** 1985.11   
 **Email:** xorcererzc@gmail.com (**Google talk** as well)   
-**Cellphone:** (+86) 137-6413-1714   
+**Cellphone:** (+86) 137-6413-1714
 
 
 
@@ -38,7 +38,7 @@ Experience
 
 #### Project: Web Game Abyss ####
 
-A Massive-multiplayer online
+- A massive-multiplayer online
 game based on Flash 3D. The only project of this startup company.
 
 ##### Responsibility #####
@@ -59,18 +59,16 @@ used by all game designers.
 
 ### 2010.7 - 2011.7 MochiMedia.com (SNDA Group) ###
 
-#### Project: MochiMedia.com Localization ###
+#### Project: MochiMedia.com Localization ####
 
-Developing MochiMedia's business in China with the resources of SNDA
+- Developing MochiMedia's business in China with the resources of SNDA
 Game.    
 Includes: connecting Chinese Flash game developers,  building website
-of Flash games for
-Chinese player.
+of Flash games for Chinese player.
 
 ##### Responsibility #####
 
-*Leader Engineer of maqiu.cn*   
-(The site had been closed.)
+*Leader Engineer of maqiu.cn* (been closed)
 
 * Adapted SNDA Game's accounting, payment and currency system to MochiMedia.
 * Ported SNDA Candy (a social network for SNDA Game users) SDK to Python.
@@ -81,7 +79,7 @@ Chinese player.
 
 #### Project 1/2:  fuwo.com ####
 
-A website, written in Python/Django, connecting decoration companies and their (potential)
+- A website, written in Python/Django, connecting decoration companies and their (potential)
 users.
 
 ##### Responsibility #####
@@ -96,7 +94,7 @@ users.
 
 #### Project 2/2: iFuwo 3D Decoration Simulator ####
 
-A Windows 3D modeling software, written in C#/WPF, for users to
+- A Windows 3D modeling software, written in C#/WPF, for users to
 simulate and share their ideas of decoration.
 
 ##### Responsibility #####
