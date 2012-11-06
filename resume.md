@@ -9,8 +9,7 @@ Zhou Chong (Logan)
 
 Objective
 -----------------------
-A position to focus on data mining/processing with proper
-algorithms.   
+A position to focus on data mining/processing.   
 It would be better if I could contribute open source projects.
 
 
