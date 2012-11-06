@@ -119,7 +119,7 @@ Misc
 ----------------
 Lastest version of this resume:
 
-+ HTML: [http://xorcerer.github.com/resume.html](http://xorcerer.github.com/resume.html)
-+ PDF: [http://xorcerer.github.com/resume.pdf](http://xorcerer.github.com/resume.pdf)
-+ Text / Markdown: [http://xorcerer.github.com/resume.md](http://xorcerer.github.com/resume.md)
++ HTML: [http://xorcerer.github.com/logan-zhou-resume.html](http://xorcerer.github.com/logan-zhou-resume.html)
++ PDF: [http://xorcerer.github.com/logan-zhou-resume.pdf](http://xorcerer.github.com/logan-zhou-resume.pdf)
++ Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume.md](http://xorcerer.github.com/logan-zhou-resume.md)
 
