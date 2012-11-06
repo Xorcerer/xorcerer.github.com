@@ -1,8 +1,9 @@
 
-# `markdown` and `wkhtmltopdf` are required
+# `markdown`, `pandoc` and `latex` are required
 # put the following code in your .git/hooks/pre-commit for auto generating
 #   sh resume-to-html-and-pdf.sh
-#   git add *.html *.pdf
+#   sh copy-resumes-to-old-name.sh
+#   git add *.md *.html *.pdf
 
 echo "
 <!DOCTYPE html>
@@ -15,10 +16,10 @@ echo "
 </head>
 
 <body>
-`markdown resume.md`
+`markdown logan-zhou-resume.md`
 </body>
 </html>
-" > resume.html
+" > logan-zhou-resume.html
 
 # Latex (MacTex in Mac OS) required.
-pandoc -f markdown resume.md -o resume.pdf
+pandoc -f markdown logan-zhou-resume.md -o logan-zhou-resume.pdf
