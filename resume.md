@@ -123,6 +123,5 @@ Lastest version of this resume:
 
 + HTML: [http://xorcerer.github.com/logan-zhou-resume.html](http://xorcerer.github.com/logan-zhou-resume.html)
 + PDF: [http://xorcerer.github.com/logan-zhou-resume.pdf](http://xorcerer.github.com/logan-zhou-resume.pdf)
-+ Word Docx: [http://xorcerer.github.com/logan-zhou-resume.docx](http://xorcerer.github.com/logan-zhou-resume.docx)
 + Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume.md](http://xorcerer.github.com/logan-zhou-resume.md)
 

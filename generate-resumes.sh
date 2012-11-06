@@ -3,7 +3,7 @@
 # put the following code in your .git/hooks/pre-commit for auto generating
 #   sh generate-resumes.sh
 #   sh copy-resumes-to-old-name.sh
-#   git add *.md *.html *.pdf
+#   git add *.md *.html *.pdf *.docx
 
 echo "
 <!DOCTYPE html>
