@@ -1,7 +1,7 @@
 
 # `markdown`, `pandoc` and `latex` are required
 # put the following code in your .git/hooks/pre-commit for auto generating
-#   sh resume-to-html-and-pdf.sh
+#   sh generate-resumes.sh
 #   sh copy-resumes-to-old-name.sh
 #   git add *.md *.html *.pdf
 
@@ -23,3 +23,4 @@ echo "
 
 # Latex (MacTex in Mac OS) required.
 pandoc -f markdown logan-zhou-resume.md -o logan-zhou-resume.pdf
+pandoc -f markdown logan-zhou-resume.md -o logan-zhou-resume.docx

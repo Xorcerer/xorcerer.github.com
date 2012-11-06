@@ -1,8 +1,10 @@
 Zhou Chong (Logan)
 ===================
 
-**Birth:** 1985.11   
-**Email:** xorcererzc@gmail.com (**Google talk** as well)   
+**Birth:** 1985.11
+
+**Email:** xorcererzc@gmail.com (**Google talk** as well)
+
 **Cellphone:** (+86) 137-6413-1714
 
 
@@ -121,5 +123,6 @@ Lastest version of this resume:
 
 + HTML: [http://xorcerer.github.com/logan-zhou-resume.html](http://xorcerer.github.com/logan-zhou-resume.html)
 + PDF: [http://xorcerer.github.com/logan-zhou-resume.pdf](http://xorcerer.github.com/logan-zhou-resume.pdf)
++ Word Docx: [http://xorcerer.github.com/logan-zhou-resume.docx](http://xorcerer.github.com/logan-zhou-resume.docx)
 + Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume.md](http://xorcerer.github.com/logan-zhou-resume.md)
 
