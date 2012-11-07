@@ -139,7 +139,7 @@ Misc
 ----------------
 Lastest version of this resume:
 
-+ HTML: [http://xorcerer.github.com/logan-zhou-resume.html](http://xorcerer.github.com/logan-zhou-resume.html)
-+ PDF: [http://xorcerer.github.com/logan-zhou-resume.pdf](http://xorcerer.github.com/logan-zhou-resume.pdf)
-+ Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume.md](http://xorcerer.github.com/logan-zhou-resume.md)
++ HTML: [http://xorcerer.github.com/logan-zhou-resume-java.html](http://xorcerer.github.com/logan-zhou-resume-java.html)
++ PDF: [http://xorcerer.github.com/logan-zhou-resume-java.pdf](http://xorcerer.github.com/logan-zhou-resume-java.pdf)
++ Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume-java.md](http://xorcerer.github.com/logan-zhou-resume-java.md)
 
