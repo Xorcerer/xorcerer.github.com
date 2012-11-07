@@ -24,3 +24,23 @@ echo "
 # Latex (MacTex in Mac OS) required.
 pandoc -f markdown logan-zhou-resume.md -o logan-zhou-resume.pdf
 pandoc -f markdown logan-zhou-resume.md -o logan-zhou-resume.docx
+
+echo "
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" >
+
+<title>Zhou Chong (Logan)</title>
+</head>
+
+<body>
+`markdown logan-zhou-resume-java.md`
+</body>
+</html>
+" > logan-zhou-resume-java.html
+
+# Latex (MacTex in Mac OS) required.
+pandoc -f markdown logan-zhou-resume-java.md -o logan-zhou-resume-java.pdf
+pandoc -f markdown logan-zhou-resume-java.md -o logan-zhou-resume-java.docx
