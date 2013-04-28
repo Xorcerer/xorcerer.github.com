@@ -35,7 +35,31 @@ StarCraft I/II player.
 
 Experience
 ---------------------
-### 2011.7 - present, Terminus Infomation Technology Limited. ###
+### 2012.12 - present, Playcool (Alternate: Icee) ###
+
+#### Project: Game Sharp ####
+
+- The foundation of all mobile games' servers of Icee.
+
+##### Responsibility #####
+
+* C# Network framework using async/await (.Net framework 4.5).
+* Automatic code generation for protocols using google-protobuf.
+* C++ client library, including a lock-free ring buffer and automatic code generation.
+
+#### Project: Social Card (code name) ####
+
+*Leader Engineer*
+
+##### Responsibility #####
+
+* Game server application development.
+* Dev server setup and configuring.
+* Plan scheduling.
+* Client storage library.
+
+
+### 2011.7 - 2012.12, Terminus Infomation Technology Limited. ###
 
 #### Project: Web Game Abyss ####
 
