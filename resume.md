@@ -20,7 +20,9 @@ Strengths
 ----------------------
 Proficient or familiar with a vast array of programming languages, and
 their concepts.    
-Including, but not limit to: Python, Ruby, C++ (including C++11 features), C#, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
+Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
+
+Proficient or familiar with parallel/concurrent computation models: C#/TPL, Erlang/Actor, Python/gevent.
 
 Big fan of meta programming, especially in C++ and Python. All I love is writing short, declaritive and maintainable code.
 
@@ -35,7 +37,31 @@ StarCraft I/II player.
 
 Experience
 ---------------------
-### 2011.7 - present, Terminus Infomation Technology Limited. ###
+### 2012.12 - present, Playcool (Alternate: Icee) ###
+
+#### Project: Game Sharp ####
+
+- The foundation of all mobile games' servers of Icee.
+
+##### Responsibility #####
+
+* C# Network framework using async/await (.Net framework 4.5).
+* Automatic code generation for protocols using google-protobuf.
+* C++ client library, including a lock-free ring buffer and automatic code generation.
+
+#### Project: Social Card (code name) ####
+
+*Leader Engineer*
+
+##### Responsibility #####
+
+* Game server application development.
+* Dev server setup and configuring.
+* Plan scheduling.
+* Client storage library.
+
+
+### 2011.7 - 2012.12, Terminus Infomation Technology Limited. ###
 
 #### Project: Web Game Abyss ####
 
