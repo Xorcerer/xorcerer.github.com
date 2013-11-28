@@ -11,7 +11,7 @@ Zhou Chong (Logan)
 
 Objective
 -----------------------
-A position to focus on data mining/processing.   
+A position to focus on data mining/processing.
 It would be better if I could contribute open source projects.
 
 
@@ -19,7 +19,7 @@ It would be better if I could contribute open source projects.
 Strengths
 ----------------------
 Proficient or familiar with a vast array of programming languages, and
-their concepts.    
+their concepts.
 Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
 
 Proficient or familiar with parallel/concurrent computation models: C#/TPL, Erlang/Actor, Python/gevent.
@@ -89,7 +89,7 @@ used by all game designers.
 #### Project: MochiMedia.com Localization ####
 
 - Developing MochiMedia's business in China with the resources of SNDA
-Game.    
+Game.
 Includes: connecting Chinese Flash game developers,  building website
 of Flash games for Chinese player.
 
@@ -147,7 +147,6 @@ Misc
 ----------------
 Lastest version of this resume:
 
-+ HTML: [http://xorcerer.github.com/logan-zhou-resume.html](http://xorcerer.github.com/logan-zhou-resume.html)
-+ PDF: [http://xorcerer.github.com/logan-zhou-resume.pdf](http://xorcerer.github.com/logan-zhou-resume.pdf)
-+ Text / Markdown: [http://xorcerer.github.com/logan-zhou-resume.md](http://xorcerer.github.com/logan-zhou-resume.md)
-
++ HTML: [http://xorcerer.github.io/logan-zhou-resume.html](http://xorcerer.github.io/logan-zhou-resume.html)
++ PDF: [http://xorcerer.github.io/logan-zhou-resume.pdf](http://xorcerer.github.io/logan-zhou-resume.pdf)
++ Text / Markdown: [http://xorcerer.github.io/logan-zhou-resume.md](http://xorcerer.github.io/logan-zhou-resume.md)
