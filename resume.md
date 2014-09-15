@@ -37,7 +37,14 @@ StarCraft I/II player.
 
 Experience
 ---------------------
-### 2012.12 - present, Playcool (Alternate: Icee) ###
+### 2014.03 - present, Caigen100 ###
+
+##### Responsibility #####
+
+* Statistics contents generation with Python (numpy, scipy).
+
+
+### 2012.12 - 2013.12, Playcool (Alternate: Icee) ###
 
 #### Project: Game Sharp ####
 
