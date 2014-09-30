@@ -3,7 +3,7 @@ Zhou Chong (Logan)
 
 **Birth:** 1985.11
 
-**Email:** xorcererzc@gmail.com (**Google talk** as well)
+**Email:** logan.zhou.cn@gmail.com
 
 **Cellphone:** (+86) 137-6413-1714
 
