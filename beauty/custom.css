@@ -1,0 +1,18 @@
+/* set the background-color to red */
+.navbar-inner {
+  background-color: blue;
+  /* remove the gradient */
+  background-image: none;
+  /* set font color to white */
+  color: white;
+    border-bottom-color: white;
+}   
+
+/* menu items */
+
+
+/* set font color and background of the project name (brand) */
+.navbar .brand {
+  background-color: white;
+  color: navy;
+}
