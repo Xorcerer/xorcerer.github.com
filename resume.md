@@ -23,7 +23,7 @@ Strengths
 ----------------------
 * Proficient or familiar with a vast array of programming languages, and
 their concepts.
-* Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
+Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
 
 * Proficient or familiar with parallel/concurrent computation models: C#/TPL, Erlang/Actor, Python/gevent.
 
