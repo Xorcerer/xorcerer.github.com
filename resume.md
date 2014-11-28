@@ -1,37 +1,40 @@
 Zhou Chong (Logan)
 ===================
 
-**Birth:** 1985.11
 
-**Email:** xorcererzc@gmail.com (**Google talk** as well)
+**Email:** logan.zhou.cn@gmail.com
 
 **Cellphone:** (+86) 137-6413-1714
 
+**Birth:** 1985.11
+
+**Github:** https://github.com/Xorcerer
 
 
 Objective
 -----------------------
 A position to focus on data mining/processing.
+
 It would be better if I could contribute open source projects.
 
 
 
 Strengths
 ----------------------
-Proficient or familiar with a vast array of programming languages, and
+* Proficient or familiar with a vast array of programming languages, and
 their concepts.
 Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
 
-Proficient or familiar with parallel/concurrent computation models: C#/TPL, Erlang/Actor, Python/gevent.
+* Proficient or familiar with parallel/concurrent computation models: C#/TPL, Erlang/Actor, Python/gevent.
 
-Big fan of meta programming, especially in C++ and Python. All I love is writing short, declaritive and maintainable code.
+* Big fan of meta programming, especially in C++ and Python. All I love is writing short, declaritive and maintainable code.
 
-Enjoy creating and maintaining tool chains to make work and life
+* Enjoy creating and maintaining tool chains to make work and life
 easier ( e.g. updating html/pdf of this resume).
 
-Mac OS user, familiar with Bash, Zsh, VIM and Emacs(with vim-mode).
+* Mac OS user, familiar with Bash, Zsh, VIM and Emacs(with vim-mode).
 
-StarCraft I/II player.
+* StarCraft I/II player.
 
 
 
