@@ -10311,18 +10311,12 @@ Elm.Main.make = function (_elm) {
    $Signal = Elm.Signal.make(_elm),
    $Time = Elm.Time.make(_elm),
    $Window = Elm.Window.make(_elm);
+   var spaceDown = $Keyboard.isDown($Char.toCode(_U.chr(" ")));
    var FiredBy = function (a) {
       return {ctor: "FiredBy"
              ,_0: a};
    };
    var Time = {ctor: "Time"};
-   var updateBullet_ = F2(function (player,
-   bullet) {
-      return _U.replace([["x"
-                         ,player.pos.x]
-                        ,["y",player.pos.y]],
-      bullet);
-   });
    var fire = F2(function (p,
    direction) {
       return {_: {}
@@ -10369,7 +10363,7 @@ Elm.Main.make = function (_elm) {
               updateBullet,
               bullets);}
          _E.Case($moduleName,
-         "between lines 49 and 51");
+         "between lines 50 and 52");
       }();
    });
    var movePlayer = F2(function (d,
@@ -10384,9 +10378,12 @@ Elm.Main.make = function (_elm) {
    movePlayer,
    player,
    $Keyboard.arrows);
-   var fireUnit = A2($Signal.sampleOn,
-   $Keyboard.isDown($Char.toCode(_U.chr(" "))),
-   playerState);
+   var fireUnit = A3($Signal.keepWhen,
+   spaceDown,
+   player,
+   A2($Signal.sampleOn,
+   spaceDown,
+   playerState));
    var bulletUpdate = A2($Signal.merge,
    A2($Signal.lift,
    $Basics.always(Time),
@@ -10481,7 +10478,7 @@ Elm.Main.make = function (_elm) {
             case "[]":
             return _L.fromArray([]);}
          _E.Case($moduleName,
-         "between lines 7 and 9");
+         "between lines 8 and 10");
       }();
    };
    var board = $List.map(function (p) {
@@ -10534,7 +10531,6 @@ Elm.Main.make = function (_elm) {
                       ,fire: fire
                       ,updateBullets: updateBullets
                       ,updateBullet: updateBullet
-                      ,updateBullet_: updateBullet_
                       ,square: square
                       ,blueSquare: blueSquare
                       ,showPlayer: showPlayer
@@ -10546,6 +10542,7 @@ Elm.Main.make = function (_elm) {
                       ,playerState: playerState
                       ,Time: Time
                       ,FiredBy: FiredBy
+                      ,spaceDown: spaceDown
                       ,fireUnit: fireUnit
                       ,bulletUpdate: bulletUpdate
                       ,bulletsState: bulletsState
