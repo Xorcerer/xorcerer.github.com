@@ -10301,7 +10301,6 @@ Elm.Main.make = function (_elm) {
    _E = _N.Error.make(_elm),
    $moduleName = "Main",
    $Basics = Elm.Basics.make(_elm),
-   $Char = Elm.Char.make(_elm),
    $Color = Elm.Color.make(_elm),
    $Graphics$Collage = Elm.Graphics.Collage.make(_elm),
    $Graphics$Element = Elm.Graphics.Element.make(_elm),
@@ -10311,12 +10310,27 @@ Elm.Main.make = function (_elm) {
    $Signal = Elm.Signal.make(_elm),
    $Time = Elm.Time.make(_elm),
    $Window = Elm.Window.make(_elm);
-   var spaceDown = $Keyboard.isDown($Char.toCode(_U.chr(" ")));
    var FiredBy = function (a) {
       return {ctor: "FiredBy"
              ,_0: a};
    };
    var Time = {ctor: "Time"};
+   var seq = function (n) {
+      return _L.range((0 - n) / 2,
+      (n - 2) / 2);
+   };
+   var getBoard = F2(function (x,
+   y) {
+      return A2($List.map,
+      function (y$) {
+         return A2($List.map,
+         function (x$) {
+            return {_: {},x: x$,y: y$};
+         },
+         seq(x));
+      },
+      seq(y));
+   });
    var fire = F2(function (p,d) {
       return {_: {}
              ,direction: d
@@ -10344,24 +10358,6 @@ Elm.Main.make = function (_elm) {
    var cellWidth = boardWidth / blockCountPerRow;
    var cw = cellWidth;
    var hcw = cw / 2;
-   var square = $Graphics$Collage.path(_L.fromArray([{ctor: "_Tuple2"
-                                                     ,_0: hcw
-                                                     ,_1: hcw}
-                                                    ,{ctor: "_Tuple2"
-                                                     ,_0: hcw
-                                                     ,_1: 0 - hcw}
-                                                    ,{ctor: "_Tuple2"
-                                                     ,_0: 0 - hcw
-                                                     ,_1: 0 - hcw}
-                                                    ,{ctor: "_Tuple2"
-                                                     ,_0: 0 - hcw
-                                                     ,_1: hcw}
-                                                    ,{ctor: "_Tuple2"
-                                                     ,_0: hcw
-                                                     ,_1: hcw}]));
-   var blueSquare = A2($Graphics$Collage.traced,
-   $Graphics$Collage.solid($Color.blue),
-   square);
    var putObject = function (pos) {
       return $Graphics$Collage.move({ctor: "_Tuple2"
                                     ,_0: pos.x * cw + hcw
@@ -10371,35 +10367,16 @@ Elm.Main.make = function (_elm) {
       return putObject(p.pos)($Graphics$Collage.filled($Color.red)($Graphics$Collage.circle(hcw)));
    };
    var showBullet = function (b) {
-      return putObject(b.pos)($Graphics$Collage.filled($Color.blue)($Graphics$Collage.circle(hcw / 2)));
+      return putObject(b.pos)($Graphics$Collage.filled($Color.lightRed)($Graphics$Collage.circle(hcw / 2)));
    };
    var showBullets = function (bs) {
       return A2($List.map,
       showBullet,
       bs);
    };
-   var seq = function (n) {
-      return A2($List.map,
-      F2(function (x,y) {
-         return x * y;
-      })(cw),
-      _L.range((0 - n) / 2,
-      (n - 1) / 2));
-   };
-   var getBoard = F2(function (x,
-   y) {
-      return A2($List.map,
-      function (y$) {
-         return A2($List.map,
-         function (x$) {
-            return {ctor: "_Tuple2"
-                   ,_0: x$
-                   ,_1: y$};
-         },
-         seq(x));
-      },
-      seq(y));
-   });
+   var blueSquare = $Graphics$Collage.filled($Color.lightBlue)(A2($Graphics$Collage.rect,
+   cw - 1,
+   cw - 1));
    var Bullet = F2(function (a,b) {
       return {_: {}
              ,direction: b
@@ -10433,10 +10410,10 @@ Elm.Main.make = function (_elm) {
    player,
    $Keyboard.arrows);
    var fireUnit = A3($Signal.keepWhen,
-   spaceDown,
+   $Keyboard.space,
    player,
    A2($Signal.sampleOn,
-   spaceDown,
+   $Keyboard.space,
    playerState));
    var bulletUpdate = A2($Signal.merge,
    A2($Signal.lift,
@@ -10493,7 +10470,7 @@ Elm.Main.make = function (_elm) {
       }();
    };
    var board = $List.map(function (p) {
-      return A2($Graphics$Collage.move,
+      return A2(putObject,
       p,
       blueSquare);
    })(flatten(A2(getBoard,
@@ -10514,7 +10491,7 @@ Elm.Main.make = function (_elm) {
               _L.append(_L.fromArray([showPlayer(p)]),
               showBullets(bs)))));}
          _E.Case($moduleName,
-         "between lines 113 and 115");
+         "between lines 103 and 105");
       }();
    });
    var main = A4($Signal.lift3,
@@ -10545,7 +10522,6 @@ Elm.Main.make = function (_elm) {
                       ,fire: fire
                       ,updateBullets: updateBullets
                       ,updateBullet: updateBullet
-                      ,square: square
                       ,blueSquare: blueSquare
                       ,showPlayer: showPlayer
                       ,showBullets: showBullets
@@ -10556,7 +10532,6 @@ Elm.Main.make = function (_elm) {
                       ,playerState: playerState
                       ,Time: Time
                       ,FiredBy: FiredBy
-                      ,spaceDown: spaceDown
                       ,fireUnit: fireUnit
                       ,bulletUpdate: bulletUpdate
                       ,bulletsState: bulletsState
