@@ -10309,27 +10309,22 @@ Elm.Main.make = function (_elm) {
    $List = Elm.List.make(_elm),
    $Maybe = Elm.Maybe.make(_elm),
    $Signal = Elm.Signal.make(_elm),
+   $Time = Elm.Time.make(_elm),
    $Window = Elm.Window.make(_elm);
-   var updateBullet_ = F2(function (player,
-   bullet) {
-      return _U.replace([["x"
-                         ,player.x]
-                        ,["y",player.y]],
-      bullet);
-   });
-   var fire = F2(function (position,
-   direction) {
+   var spaceDown = $Keyboard.isDown($Char.toCode(_U.chr(" ")));
+   var FiredBy = function (a) {
+      return {ctor: "FiredBy"
+             ,_0: a};
+   };
+   var Time = {ctor: "Time"};
+   var fire = F2(function (p,d) {
       return {_: {}
-             ,dx: direction.x
-             ,dy: direction.y
-             ,x: position.x
-             ,y: position.y};
+             ,direction: d
+             ,pos: p.pos};
    });
-   var bullet = A2(fire,
-   {_: {},x: 0,y: 0},
-   {_: {},x: 0,y: 0});
    var bullets = _L.fromArray([]);
-   var player = {_: {},x: 0,y: 0};
+   var player = {_: {}
+                ,pos: {_: {},x: 0,y: 0}};
    var boardWidth = 800;
    var blockCountPerRow = 10;
    var bcpr = blockCountPerRow;
@@ -10337,47 +10332,14 @@ Elm.Main.make = function (_elm) {
    var myClamp = A2($Basics.clamp,
    0 - hbcpr,
    hbcpr - 1);
-   var movePlayer = F2(function (d,
-   player) {
+   var clampVector = function (v) {
       return _U.replace([["x"
-                         ,myClamp(player.x) + $Basics.toFloat(d.x)]
-                        ,["y"
-                         ,myClamp(player.y) + $Basics.toFloat(d.y)]],
-      player);
-   });
-   var playerState = A3($Signal.foldp,
-   movePlayer,
-   player,
-   $Keyboard.arrows);
-   var bulletsState = A2($Signal.sampleOn,
-   $Keyboard.isDown($Char.toCode(_U.chr(" "))),
-   A3($Signal.foldp,
-   updateBullet_,
-   bullet,
-   playerState));
-   var updateBullet = function (b) {
-      return function () {
-         var newBullet = {_: {}
-                         ,dx: b.dx
-                         ,dy: b.dy
-                         ,x: b.x + b.dx
-                         ,y: b.y + b.dy};
-         return A2(F2(function (x,y) {
-            return !_U.eq(x,y);
-         }),
-         myClamp(newBullet.x),
-         newBullet.x) || A2(F2(function (x,
-         y) {
-            return !_U.eq(x,y);
-         }),
-         myClamp(newBullet.x),
-         newBullet.x) ? $Maybe.Nothing : $Maybe.Just(newBullet);
-      }();
+                         ,myClamp(v.x)]
+                        ,["y",myClamp(v.y)]],
+      v);
    };
-   var updateBullets = function (bullets) {
-      return A2($List.filterMap,
-      updateBullet,
-      bullets);
+   var outOfBoard = function (x) {
+      return !_U.eq(myClamp(x),x);
    };
    var cellWidth = boardWidth / blockCountPerRow;
    var cw = cellWidth;
@@ -10400,15 +10362,16 @@ Elm.Main.make = function (_elm) {
    var blueSquare = A2($Graphics$Collage.traced,
    $Graphics$Collage.solid($Color.blue),
    square);
-   var showPlayer = function (p) {
+   var putObject = function (pos) {
       return $Graphics$Collage.move({ctor: "_Tuple2"
-                                    ,_0: p.x * cw + hcw
-                                    ,_1: p.y * cw + hcw})($Graphics$Collage.filled($Color.red)($Graphics$Collage.circle(hcw)));
+                                    ,_0: pos.x * cw + hcw
+                                    ,_1: pos.y * cw + hcw});
+   };
+   var showPlayer = function (p) {
+      return putObject(p.pos)($Graphics$Collage.filled($Color.red)($Graphics$Collage.circle(hcw)));
    };
    var showBullet = function (b) {
-      return $Graphics$Collage.move({ctor: "_Tuple2"
-                                    ,_0: b.x * cw + hcw
-                                    ,_1: b.y * cw + hcw})($Graphics$Collage.filled($Color.blue)($Graphics$Collage.circle(hcw)));
+      return putObject(b.pos)($Graphics$Collage.filled($Color.blue)($Graphics$Collage.circle(hcw / 2)));
    };
    var showBullets = function (bs) {
       return A2($List.map,
@@ -10437,17 +10400,84 @@ Elm.Main.make = function (_elm) {
       },
       seq(y));
    });
-   var Bullet = F4(function (a,
-   b,
-   c,
-   d) {
+   var Bullet = F2(function (a,b) {
       return {_: {}
-             ,dx: c
-             ,dy: d
-             ,x: a
-             ,y: b};
+             ,direction: b
+             ,pos: a};
    });
-   var Player = F2(function (a,b) {
+   var Player = function (a) {
+      return {_: {},pos: a};
+   };
+   var addVector = F2(function (v1,
+   v2) {
+      return _U.replace([["x"
+                         ,v1.x + v2.x]
+                        ,["y",v1.y + v2.y]],
+      v1);
+   });
+   var movePlayer = F2(function (direction,
+   player) {
+      return function () {
+         var d = {_: {}
+                 ,x: $Basics.toFloat(direction.x)
+                 ,y: $Basics.toFloat(direction.y)};
+         return _U.replace([["pos"
+                            ,clampVector(A2(addVector,
+                            player.pos,
+                            d))]],
+         player);
+      }();
+   });
+   var playerState = A3($Signal.foldp,
+   movePlayer,
+   player,
+   $Keyboard.arrows);
+   var fireUnit = A3($Signal.keepWhen,
+   spaceDown,
+   player,
+   A2($Signal.sampleOn,
+   spaceDown,
+   playerState));
+   var bulletUpdate = A2($Signal.merge,
+   A2($Signal.lift,
+   $Basics.always(Time),
+   $Time.fps(10)),
+   A2($Signal.lift,
+   FiredBy,
+   fireUnit));
+   var updateBullet = function (b) {
+      return function () {
+         var newBullet = _U.replace([["pos"
+                                     ,A2(addVector,
+                                     b.pos,
+                                     b.direction)]],
+         b);
+         return outOfBoard(newBullet.pos.x) || outOfBoard(newBullet.pos.y) ? $Maybe.Nothing : $Maybe.Just(newBullet);
+      }();
+   };
+   var updateBullets = F2(function (event,
+   bullets) {
+      return function () {
+         switch (event.ctor)
+         {case "FiredBy":
+            return A2($List._op["::"],
+              A2(fire,
+              event._0,
+              {_: {},x: 0,y: 1}),
+              bullets);
+            case "Time":
+            return A2($List.filterMap,
+              updateBullet,
+              bullets);}
+         _E.Case($moduleName,
+         "between lines 58 and 60");
+      }();
+   });
+   var bulletsState = A3($Signal.foldp,
+   updateBullets,
+   bullets,
+   bulletUpdate);
+   var Vector = F2(function (a,b) {
       return {_: {},x: a,y: b};
    });
    var flatten = function (l) {
@@ -10459,7 +10489,7 @@ Elm.Main.make = function (_elm) {
             case "[]":
             return _L.fromArray([]);}
          _E.Case($moduleName,
-         "between lines 7 and 9");
+         "between lines 8 and 10");
       }();
    };
    var board = $List.map(function (p) {
@@ -10469,22 +10499,22 @@ Elm.Main.make = function (_elm) {
    })(flatten(A2(getBoard,
    blockCountPerRow,
    blockCountPerRow)));
-   var display = F3(function (_v3,
+   var display = F3(function (_v5,
    p,
    bs) {
       return function () {
-         switch (_v3.ctor)
+         switch (_v5.ctor)
          {case "_Tuple2":
             return A3($Graphics$Element.container,
-              _v3._0,
-              _v3._1,
+              _v5._0,
+              _v5._1,
               $Graphics$Element.middle)(A2($Graphics$Collage.collage,
               boardWidth,
               boardWidth)(_L.append(board,
               _L.append(_L.fromArray([showPlayer(p)]),
-              showBullets(_L.fromArray([bs]))))));}
+              showBullets(bs)))));}
          _E.Case($moduleName,
-         "between lines 91 and 93");
+         "between lines 113 and 115");
       }();
    });
    var main = A4($Signal.lift3,
@@ -10494,6 +10524,8 @@ Elm.Main.make = function (_elm) {
    bulletsState);
    _elm.Main.values = {_op: _op
                       ,flatten: flatten
+                      ,Vector: Vector
+                      ,addVector: addVector
                       ,Player: Player
                       ,Bullet: Bullet
                       ,blockCountPerRow: blockCountPerRow
@@ -10506,11 +10538,13 @@ Elm.Main.make = function (_elm) {
                       ,player: player
                       ,bullets: bullets
                       ,myClamp: myClamp
+                      ,clampVector: clampVector
+                      ,putObject: putObject
+                      ,outOfBoard: outOfBoard
                       ,movePlayer: movePlayer
                       ,fire: fire
                       ,updateBullets: updateBullets
                       ,updateBullet: updateBullet
-                      ,updateBullet_: updateBullet_
                       ,square: square
                       ,blueSquare: blueSquare
                       ,showPlayer: showPlayer
@@ -10519,8 +10553,12 @@ Elm.Main.make = function (_elm) {
                       ,seq: seq
                       ,getBoard: getBoard
                       ,board: board
-                      ,bullet: bullet
                       ,playerState: playerState
+                      ,Time: Time
+                      ,FiredBy: FiredBy
+                      ,spaceDown: spaceDown
+                      ,fireUnit: fireUnit
+                      ,bulletUpdate: bulletUpdate
                       ,bulletsState: bulletsState
                       ,display: display
                       ,main: main};
