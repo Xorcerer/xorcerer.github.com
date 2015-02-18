@@ -40,10 +40,20 @@ easier ( e.g. updating html/pdf of this resume).
 
 Experience
 ---------------------
-### 2014.03 - present, Caigen100 ###
+### 2014.10 - Present, Education First (EF) ###
 
 ##### Responsibility #####
 
+* Redesigned domain model for core lessons mamagement;
+* Reimplemented technical/Domain model for the new design, in Database Level and API level;
+* Performance tuning.
+
+
+### 2014.03 - 2014.9.30, Caigen100 ###
+
+##### Responsibility #####
+
+* Persistence Homology Study (and the company gave up this later).
 * Statistics contents generation with Python (numpy, scipy).
 
 
