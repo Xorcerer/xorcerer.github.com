@@ -13,14 +13,13 @@ Zhou Chong (Logan)
 
 Objective
 -----------------------
-A position to focus on data mining/processing.
-
-It would be better if I could contribute open source projects.
+It would be perfect if I could contribute open source projects.
 
 
 
 Strengths
 ----------------------
+* Proficient with C++, C#, Python.
 * Proficient or familiar with a vast array of programming languages, and
 their concepts.
 Including, but not limit to: C# (including TPL, async/await, dynamic IL generation), C++ (including C++11 features), Python, Ruby, Java, Actionscipt 3 (and its assembly), Objective-C (without Cocoa), Erlang, Common Lisp.
@@ -44,9 +43,10 @@ Experience
 
 #### Project: Chrono Blade  ####
 
-Senior Server Engineer
+Server Architect
 
 ##### Responsibility #####
+* Game launch support (Work at Seoul Korea for 2 months, at SF US for 2 months)
 * Redesigned threading model for server;
 * Performance tuning;
 * C++ logging system rewrite, with strong typing, multiple formats and outputs.
