@@ -1,12 +1,15 @@
 (function () {
     var resize = function (event) {
         var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName('body')[0], x = w.innerWidth || e.clientWidth || g.clientWidth, y = w.innerHeight || e.clientHeight || g.clientHeight;
-        var divs = document.getElementsByClassName("pic-bg");
-        for (var i = 0; i < divs.length; i++) {
-            var div = divs[i];
-            div.style.width = x.toString() + "px";
-            div.style.height = y.toString() + "px";
-        }
+        var updateSize = function (className) {
+            var divs = document.getElementsByClassName(className);
+            for (var i = 0; i < divs.length; i++) {
+                var div = divs.item(i);
+                div.style.width = x.toString() + "px";
+                div.style.height = y.toString() + "px";
+            }
+        };
+        updateSize("pic-bg");
         var containers = document.getElementsByClassName("billboard-container");
         for (var i = 0; i < containers.length; i++) {
             var container = containers[i];
