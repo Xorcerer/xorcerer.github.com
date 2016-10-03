@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        body {
+            overflow-x: hidden;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .pic-bg {
+            padding: 0px;
+            margin: 0px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .pic1 {
+            background-image: url(bing-24.jpg);
+        }
+        
+        .pic2 {
+            background-image: url(butterfly.jpg);
+        }
+        
+        .billboard-container {
+            position: relative;
+        }
+        
+        .billboard {
+            position: absolute;
+            display: inline-block;
+            padding: 5px 20px;
+            font-size: 20pt;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic1 pic-bg">
+        <div class="billboard-container">
+            <div class="billboard" data-offset="left: 0.1, top: 0.8">Hello world</div>
+        </div>
+    </div>
+    <div class="pic2 pic-bg">
+        <div class="billboard-container">
+            <div class="billboard" data-offset="left: 0.1, top: 0.8">Hello world</div>
+            <div class="billboard" data-offset="left: 0.1, top: 0.2">Hello world</div>
+        </div>
+    </div>
+</body>
+<script src="app/screen.js"></script>
+
+</html>
