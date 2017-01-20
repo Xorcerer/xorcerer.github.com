@@ -39,17 +39,28 @@ easier ( e.g. updating html/pdf of this resume).
 
 Experience
 ---------------------
-### 2015.3 - Present, nWay.com ###
+### 2016.5 - present, Microsoft ###
+
+#### Bing Live Site Monitoring ####
+
+Software Engineer II
+
+##### Responsiblity #####
+* Traffic shift detection (C#, Python, Analysis with traffic data across datacenters)
+* Traffic shift test (C#, manually fail away traffic from one datacenter to another)
+
+
+### 2015.3 - 2016.3, nWay.com ###
 
 #### Project: Chrono Blade  ####
 
 Server Architect
 
 ##### Responsibility #####
-* Game launch support (Work at Seoul Korea for 2 months, at SF US for 2 months)
-* Redesigned threading model for server;
-* Performance tuning;
-* C++ logging system rewrite, with strong typing, multiple formats and outputs.
+* Game launch onsite support (Work at Seoul Korea for 2 months, at SF US for 2 months)
+* Redesigned threading model for server (C++);
+* Performance tuning (C++);
+* C++ logging system, with strong typing, multiple formats and outputs.
 
 
 ### 2014.10 - 2015.3, Education First (EF) ###
@@ -90,7 +101,7 @@ Server Architect
 * Game server application development.
 * Dev server setup and configuring.
 * Plan scheduling.
-* Client storage library.
+* Client storage library (C++).
 
 
 ### 2011.7 - 2012.12, Terminus Infomation Technology Limited. ###
